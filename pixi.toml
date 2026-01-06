@@ -14,5 +14,5 @@ clone = "test -d mjlab || git clone https://github.com/mujocolab/mjlab.git"
 setup = { depends-on = ["clone"], cmd = """
     cd mjlab && 
     uv sync && 
-    uv add "mujoco-warp @ git+https://github.com/google-deepmind/mujoco_warp@1c6b31692eaa5d3134093958d839165245d196a6"
+    uv add "mujoco-warp @ git+https://github.com/google-deepmind/mujoco_warp@9491175b7cbea87e28d3e3e67733095317c33398"
 """ }
