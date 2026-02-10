@@ -1,3 +1,11 @@
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+rsl_rl/*
+wandb/*
+motions/*
+mjlab/*
+.antigravity/*
+.agent/*
+*.code-workspace

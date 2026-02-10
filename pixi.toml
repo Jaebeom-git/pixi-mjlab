@@ -7,12 +7,18 @@ version = "0.1.0"
 [dependencies]
 uv = "*"
 git = "*"  # git clone을 위해 추가
+nodejs = "*"
 
 [tasks]
 clone = "test -d mjlab || git clone https://github.com/mujocolab/mjlab.git"
 
 setup = { depends-on = ["clone"], cmd = """
     cd mjlab && 
-    uv sync && 
-    uv add "mujoco-warp @ git+https://github.com/google-deepmind/mujoco_warp@9491175b7cbea87e28d3e3e67733095317c33398"
+    uv sync
 """ }
+
+train = "cd mjlab && uv run train"
+play = "cd mjlab && uv run play"
+demo = "cd mjlab && uv run demo"
+list_envs = "cd mjlab && uv run list_envs"
+viz-nan = "cd mjlab && uv run viz-nan"

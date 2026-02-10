@@ -1,0 +1,2 @@
+tls-no-verify = true
+pixi-ssl-verify = false 
